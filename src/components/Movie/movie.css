@@ -1,0 +1,64 @@
+.movie-thumbnail-poster {
+    width: 100%
+}
+
+.movie-title {
+    color: #dedede;
+    font-weight: bold;
+}
+
+.trailer-button {
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+    background-color: #6464FF;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row-direction {
+    display: flex !important;
+    flex-direction: row !important;
+}
+.play-trailer-text {
+    color: #dedede;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: large;
+    padding-bottom: 2px;
+}
+.play-trailer-icon {
+    color: #dedede;
+    width: 25px;
+    height: 25px;
+}
+
+
+.white-text {
+    color: #dedede;
+}
+.font-s {
+    font-size: small;
+}
+.font-m {
+    font-size: medium;
+}
+.font-l {
+    font-size: large;
+}
+.font-bold {
+    font-weight: bold;
+}
+
+.border {
+    color: #dedede;
+    outline: #dedede;
+    border-radius: 6px;
+    font-size: large;
+    padding: 5px;
+    padding-top: 3px;
+}

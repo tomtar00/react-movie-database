@@ -1,0 +1,16 @@
+.dropdown {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dropdown-toggle {
+    color: #dedede !important;
+}
+
+.dropdown-menu {
+    background-color: #373c57 !important;
+}
+
+.dropdown-item:active {
+    background-color: rgb(100, 100, 255) !important;
+}

@@ -8,6 +8,18 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
+    
+}
+
+html {
+  overflow-y: scroll;
+}
+
+::-moz-selection {
+  background: rgb(100, 100, 255);
+}
+
+::selection {
+  background: rgb(100, 100, 255);
 }

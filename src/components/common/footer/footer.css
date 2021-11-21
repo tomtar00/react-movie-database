@@ -1,0 +1,20 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    background-color:#13151f;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.copyright {
+    color: #909090;
+}
+.copyright-name {
+    color: #dedede;
+}

@@ -1,0 +1,29 @@
+.form-control:not(active){
+    background-color:rgb(0, 0, 0, 0);
+    color:#dedede;
+ }
+
+.form-control:focus{
+    background-color:#dedede;
+    color:black;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar {
+    background-color:#13151f;
+}
+
+.logo-text {
+    font-size: x-large;
+    text-align: left;
+    color: rgb(100, 100, 255);
+    font-weight: bold;
+    line-height: 75%;
+    margin-top: 10px;
+}
+.desc-text {
+    font-size: small;
+    color: #dedede;
+    line-height: 0%;
+}

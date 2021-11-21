@@ -1,0 +1,10 @@
+.movie-thumbnail-grid-row {
+    gap: 0px;
+}
+.movie-thumbnail-grid-col {
+    padding-top: 25px;
+}
+
+.container-fluid {
+    padding: 0;
+}

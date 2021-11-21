@@ -1,0 +1,17 @@
+.center-content {
+    text-align: center;
+    color: #dedede;
+    flex-direction: column;
+}
+
+.btn-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.btn-signup-color {
+    background-color: rgb(100, 100, 255);
+    color: #dedede;
+    border-radius: 5px;
+    width: 120px;
+}

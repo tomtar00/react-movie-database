@@ -1,0 +1,125 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "yearOfProduction": "2015",
+            "title": "Spectre",
+            "description": "A cryptic message from Bond’s past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE.",
+            "img": "https://image.tmdb.org/t/p/w500/672kUEMtTHcaVYSVY4eiHEliHFa.jpg",
+            "duration": {
+                "hours": 2,
+                "minutes": 28
+            },
+            "genre": [
+                {"name": "Action"},
+                {"name": "Thriller"},
+                {"name": "Adventure"}
+            ],
+            "trailer": "https://youtu.be/z4UDNzXD3qA",
+            "numVotes": 10,
+            "sumVotes": 75,
+            "views": 400
+        },
+        {
+            "id": 2,
+            "yearOfProduction": "2017",
+            "title": "Blade Runner 2049",
+            "description": "Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for 30 years.",
+            "img": "https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+            "duration": {
+                "hours": 2,
+                "minutes": 44
+            },
+            "genre": [
+                {"name": "Science Fiction"},
+                {"name": "Drama"}
+            ],
+            "trailer": "https://youtu.be/dZOaI_Fn5o4",
+            "numVotes": 10,
+            "sumVotes": 88,
+            "views": 567
+        },
+        {
+            "id": 3,
+            "yearOfProduction": "2019",
+            "title": "Avengers: Endgame",
+            "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+            "img": "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+            "duration": {
+                "hours": 3,
+                "minutes": 1
+            },
+            "genre": [
+                {"name": "Science Fiction"},
+                {"name": "Adventure"},
+                {"name": "Action"}
+            ],
+            "trailer": "https://youtu.be/AMSITikqKiM",
+            "numVotes": 10,
+            "sumVotes": 79,
+            "views": 765
+        },
+        {
+            "id": 4,
+            "yearOfProduction": "2013",
+            "title": "World War Z",
+            "description": "Life for former United Nations investigator Gerry Lane and his family seems content. Suddenly, the world is plagued by a mysterious infection turning whole human populations into rampaging mindless zombies. After barely escaping the chaos, Lane is persuaded to go on a mission to investigate this disease. What follows is a perilous trek around the world where Lane must brave horrific dangers and long odds to find answers before human civilization falls.",
+            "img": "https://image.tmdb.org/t/p/w500/1SWBSYJsnyhdNRfLI1T6RsCxAQ4.jpg",
+            "duration": {
+                "hours": 1,
+                "minutes": 56
+            },
+            "genre": [
+                {"name": "Science Fiction"},
+                {"name": "Drama"},
+                {"name": "Action"},
+                {"name": "Horror"},
+                {"name": "Thriller"}
+            ],
+            "trailer": "https://youtu.be/TvRCQM2HrXs",
+            "numVotes": 100,
+            "sumVotes": 915,
+            "views": 345
+        },
+        {
+            "id": 5,
+            "yearOfProduction": "2008",
+            "title": "The Dark Knight",
+            "description": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+            "img": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+            "duration": {
+                "hours": 2,
+                "minutes": 32
+            },
+            "genre": [
+                {"name": "Drama"},
+                {"name": "Action"},
+                {"name": "Crime"},
+                {"name": "Thriller"}
+            ],
+            "trailer": "https://youtu.be/kmJLuwP3MbY",
+            "numVotes": 10,
+            "sumVotes": 85,
+            "views": 678
+        },
+        {
+            "id": 6,
+            "yearOfProduction": "2021",
+            "title": "Dune",
+            "description": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
+            "img": "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+            "duration": {
+                "hours": 2,
+                "minutes": 35
+            },
+            "genre": [
+                {"name": "Science Fiction"},
+                {"name": "Adventure"}
+            ],
+            "trailer": "https://youtu.be/w0HgHet0sxg",
+            "numVotes": 10,
+            "sumVotes": 93,
+            "views": 468
+        }
+    ]
+}
