@@ -1,0 +1,39 @@
+.center-content {
+    text-align: center;
+    color: #dedede;
+    flex-direction: column;
+}
+
+.btn-add {
+    background-color: rgb(100, 100, 255) !important;
+    color: #dedede;
+    border: none !important;
+    border-radius: 5px;
+    width: 120px;
+}
+.btn-add-center {
+    display: flex  !important;
+    justify-content: center  !important;
+    align-items: center  !important;
+}
+
+
+.searchBox {
+	border: none;
+}
+
+.option {
+	color: #dedede;
+    background-color: #373c57;
+}
+.option:hover {
+    background-color: rgb(100, 100, 255) !important;
+}
+
+.chip {
+    background-color: rgb(100, 100, 255) !important;
+    border-radius: 5px !important;
+}
+.highlightOption {
+    background-color: rgb(100, 100, 255) !important;
+}

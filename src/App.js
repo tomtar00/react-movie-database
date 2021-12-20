@@ -8,8 +8,10 @@ import Movie from './components/Movie/movie';
 import Login from './components/Login/login';
 import SignUp from './components/Signup/signup';
 import NotFound from './components/NotFound/notFound';
+import AddMovie from './components/AddMovie/addMovie';
 
 import Footer from './components/common/footer/footer';
+
 
 function App() {
 	return (
@@ -21,6 +23,7 @@ function App() {
 					<Route path="/movie/:id" component={Movie} />
 					<Route path="/login" component={Login} />
 					<Route path="/signup" component={SignUp} />
+					<Route path="/add" component={AddMovie} />
 					<Route path="/not-found" component={NotFound} />
 					<Redirect to="/not-found" />
 				</Switch>

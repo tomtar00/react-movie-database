@@ -10,7 +10,8 @@
     align-items: center
 }
 .btn-login-color {
-    background-color: rgb(100, 100, 255);
+    background-color: rgb(100, 100, 255) !important;
+    border: none !important;
     color: #dedede;
     border-radius: 5px;
     width: 120px;
