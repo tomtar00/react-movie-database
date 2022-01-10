@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { isExpired } from "react-jwt";
 
 import Header from './components/common/header/header.js';
 
@@ -23,7 +24,12 @@ function App() {
 					<Route path="/movie/:id" component={Movie} />
 					<Route path="/login" component={Login} />
 					<Route path="/signup" component={SignUp} />
-					<Route path="/add" component={AddMovie} />
+					<Route path="/add" render={props => {
+						if (isExpired(localStorage.getItem('token'))) {
+							return <Redirect to="/" />;
+						}
+						return <AddMovie />;
+					}} />
 					<Route path="/not-found" component={NotFound} />
 					<Redirect to="/not-found" />
 				</Switch>

@@ -10,9 +10,39 @@ class Home extends React.Component {
 		super(props)
 		this.state = {
 			searchTerm: "",
-			sortFunction: this.sortFunctions.yearAscending,
-			currentSorFunctionName: "Year (asc)"
+			sortFunction: this.sortFunctions.titleAscending,
+			currentSorFunctionName: "Title (asc)",
+			isLoaded: false,
+			movies: []
 		}
+	}
+
+	sortFunctions = {
+		//yearAscending: (movie1, movie2) => { return movie1.yearOfProduction - movie2.yearOfProduction },
+		//yearDescending: (movie1, movie2) => { return movie2.yearOfProduction - movie1.yearOfProduction },
+		titleAscending: (movie1, movie2) => { return movie1.title > movie2.title ? 1 : -1 },
+		titleDescending: (movie1, movie2) => { return movie1.title < movie2.title ? 1 : -1 }
+	}
+
+	componentDidMount() {
+		this.setSortFunction(this.state.sortFunction)
+
+		fetch("https://pr-movies.herokuapp.com/api/movies")
+			.then(res => res.json())
+			.then((result) => {
+				this.setState({
+					isLoaded: true,
+					movies: result
+				});
+				console.log('movies downloaded')
+			},
+				(error) => {
+					this.setState({
+						isLoaded: true,
+						error
+					});
+				}
+			)
 	}
 
 	setSearchTerm = (value) => {
@@ -29,14 +59,6 @@ class Home extends React.Component {
 		this.setState({
 			sortFunction: value
 		})
-	}
-
-	// sort functions
-	sortFunctions = {
-		yearAscending: (movie1, movie2) => { return movie1.yearOfProduction - movie2.yearOfProduction },
-		yearDescending: (movie1, movie2) => { return movie2.yearOfProduction - movie1.yearOfProduction },
-		titleAscending: (movie1, movie2) => { return movie1.title > movie2.title ? 1 : -1 },
-		titleDescending: (movie1, movie2) => { return movie1.title < movie2.title ? 1 : -1 }
 	}
 
 	onDropdownChange = (eventKey) => {
@@ -56,13 +78,15 @@ class Home extends React.Component {
 						menuVariant="dark"
 						onSelect={this.onDropdownChange}
 					>
-						<NavDropdown.Item eventKey="yearAscending">
-							<div onClick={(e) => this.setCurrentSortName(e.target.textContent)}>Year (asc)</div>
-						</NavDropdown.Item>
-						<NavDropdown.Item eventKey="yearDescending">
-							<div onClick={(e) => this.setCurrentSortName(e.target.textContent)}>Year (desc)</div>
-						</NavDropdown.Item>
-						<NavDropdown.Divider />
+						{/*
+							<NavDropdown.Item eventKey="yearAscending">
+								<div onClick={(e) => this.setCurrentSortName(e.target.textContent)}>Year (asc)</div>
+							</NavDropdown.Item>
+							<NavDropdown.Item eventKey="yearDescending">
+								<div onClick={(e) => this.setCurrentSortName(e.target.textContent)}>Year (desc)</div>
+							</NavDropdown.Item>
+							<NavDropdown.Divider />
+						*/}
 						<NavDropdown.Item eventKey="titleAscending">
 							<div onClick={(e) => this.setCurrentSortName(e.target.textContent)}>Title (asc)</div>
 						</NavDropdown.Item>
@@ -84,10 +108,15 @@ class Home extends React.Component {
 				</Container>
 
 				<div>
-					<ThumbnailGrid
-						searchInput={this.state.searchTerm}
-						sortFunction={this.state.sortFunction}
-					/>
+					{ this.state.isLoaded ?
+						<ThumbnailGrid
+							movies={this.state.movies}
+							searchInput={this.state.searchTerm}
+							sortFunction={this.state.sortFunction}
+						/>
+						:
+						null // loading...
+					}
 				</div>
 			</div>
 

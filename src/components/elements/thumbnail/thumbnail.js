@@ -6,20 +6,20 @@ import ProgressCircle from '../../common/progressCircle/progressCircle';
 const Thumbnail = (props) => {
     const movie = props.movieData
     const clickable = props.clickable
-    const avgRating = movie.sumVotes / movie.numVotes
+    const avgRating = /*movie.sumVotes / movie.numVotes*/8.4
     return (
         <div className="movie-thumbnail-block">
             {clickable ?
                 <Nav.Link href={`/movie/${movie.id}`} className="movie-thumbnail-link">
-                    <img src={movie.img} alt={movie.title} className="movie-thumbnail-image" />
+                    <img src={movie.image} alt={movie.title} className="movie-thumbnail-image" />
                 </Nav.Link>
                 :
-                <img src={movie.img} alt={movie.title} />
+                <img className="movie-thumbnail-image" src={movie.image} alt={movie.title} />
             }
 
             <div className="movie-thumbnail-bottom">
                 <div>
-                    <p className='movie-thumbnail-year'>{movie.yearOfProduction}</p>
+                    <p className='movie-thumbnail-year'>{/*movie.yearOfProduction*/2000}</p>
                     <p className='movie-thumbnail-title'>{movie.title}</p>
                 </div>
                 <ProgressCircle 

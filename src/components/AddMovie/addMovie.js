@@ -2,8 +2,13 @@ import "./addMovie.css"
 import React from "react";
 import { Container, Form, Row, Col, Button } from 'react-bootstrap'
 import Multiselect from 'multiselect-react-dropdown';
+import { useHistory } from "react-router-dom";
+
+const axios = require('axios');
 
 const AddMovie = (props) => {
+
+    const history = useHistory();
 
     const genres = [
         { name: 'Action' },
@@ -19,19 +24,34 @@ const AddMovie = (props) => {
 
     const handleAdd = (e) => {
         e.preventDefault()
-        const movie = {
-            'title': e.target.elements.title.value,
-            'description': e.target.elements.description.value,
-            'year': e.target.elements.year.value,
-            'img': e.target.elements.img_link.value,
-            'trailer': e.target.elements.trailer_link.value,
-            'duration': {
-                'hours': e.target.elements.hours.value,
-                'minutes': e.target.elements.minutes.value
-            },
-            'genre': multiselectRef.current.state.selectedValues
-        }
-        console.log('handle', movie)
+        //const movie = {
+        //    'title': e.target.elements.title.value,
+        //    'description': e.target.elements.description.value,
+        //    'year': e.target.elements.year.value,
+        //    'img': e.target.elements.img_link.value,
+        //    'trailer': e.target.elements.trailer_link.value,
+        //    'duration': {
+        //        'hours': e.target.elements.hours.value,
+        //        'minutes': e.target.elements.minutes.value
+        //    },
+        //    'genre': multiselectRef.current.state.selectedValues
+        //}
+
+        
+        axios({
+            method: 'post',
+            url: 'https://pr-movies.herokuapp.com/api/movies',
+            data: {
+                title: e.target.elements.title.value,
+                image: e.target.elements.img_link.value,
+                content: e.target.elements.description.value
+            }
+        }).then((response) => {
+            console.log('MOVIE ADDED');
+            history.push("/");
+        }).catch((error) => {
+            console.log('ERROR:', error);
+        });
     }
 
     return (
@@ -46,14 +66,15 @@ const AddMovie = (props) => {
                     <Form.Label className="white-text">Description</Form.Label>
                     <Form.Control as="textarea" name="description" rows={3} placeholder="Enter description" />
                 </Form.Group>
-                <Form.Group className="mb-5">
-                    <Form.Label className="white-text">Year of production</Form.Label>
-                    <Form.Control name="year" placeholder="Enter year" />
-                </Form.Group>
-
                 <Form.Group className="mb-3">
                     <Form.Label className="white-text">Image link</Form.Label>
                     <Form.Control name="img_link" placeholder="Enter link" />
+                </Form.Group>
+
+                {/*
+                <Form.Group className="mb-5">
+                    <Form.Label className="white-text">Year of production</Form.Label>
+                    <Form.Control name="year" placeholder="Enter year" />
                 </Form.Group>
                 <Form.Group className="mb-5">
                     <Form.Label className="white-text">Trailer link</Form.Label>
@@ -82,6 +103,7 @@ const AddMovie = (props) => {
                         ref={multiselectRef}
                     />
                 </Form.Group>
+                */}
                 
                 <div className="btn-add-center">
                     <Button className="btn-add mt-5" type="submit">

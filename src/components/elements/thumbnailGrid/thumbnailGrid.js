@@ -9,7 +9,7 @@ const ThumbnailGrid = (props) => {
         <Container>
             <Row className='movie-thumbnail-grid-row'>
                 {
-                    database.movies
+                    props.movies
                         .filter((movie) => {
                             const searchTerm = props.searchInput
                             if (searchTerm === "")
